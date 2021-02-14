@@ -92,7 +92,7 @@ func (f *Failure) Error() string {
 			buf.AppendString(": ")
 		}
 
-		logfmt.Encode(buf, f.ctx)
+		logfmt.EncodeMap(buf, f.ctx)
 	}
 
 	if f.errMsg != "" {
